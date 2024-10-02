@@ -216,7 +216,8 @@ if __name__ == "__main__":
 
         args = parser.parse_known_args()[0]
 
-        root_folder = None if args.output_folder == "." else args.output_folder
+        # root_folder = None if args.output_folder == "." else args.output_folder
+        root_folder = args.output_folder
 
         return args.expt_name, root_folder, args.use_gpu == "yes"
 
