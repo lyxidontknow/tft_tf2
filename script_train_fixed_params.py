@@ -61,10 +61,10 @@ def main(expt_name,
       use_gpu: Whether to run tensorflow with GPU operations
       model_folder: Folder path where models are serialized
       data_csv_path: Path to csv file containing data
-      data_formatter: Dataset-specific data fromatter (see
-        expt_settings.dataformatter.GenericDataFormatter)
-      use_testing_mode: Uses a smaller models and data sizes for testing purposes
-        only -- switch to False to use original default settings
+      data_formatter: Dataset-specific data fromatter
+        (see expt_settings.dataformatter.GenericDataFormatter)
+      use_testing_mode: Uses a smaller models and data sizes for testing purposes only
+        -- switch to "False" to use original default settings
     """
 
     num_repeats = 1
@@ -236,4 +236,4 @@ if __name__ == "__main__":
         model_folder=os.path.join(config.model_folder, "fixed"),
         data_csv_path=config.data_csv_path,
         data_formatter=formatter,
-        use_testing_mode=True)  # Change to false to use original default params
+        use_testing_mode=True)  # Change to "False" to use original default params
